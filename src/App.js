@@ -69,7 +69,7 @@ const App = () => {
         <div className="row">
           <Button symbol="0" handleClick={addToText} />
           <Button symbol="." handleClick={addToText} />
-          <Button symbol="=" handleClick={calculateResult} />
+          <Button symbol="=" color="#71D45B" handleClick={calculateResult} />
           <Button symbol="^" color={buttonColor} handleClick={addToText} />
           <Button symbol="%" color={buttonColor} handleClick={addToText} />
         </div>

@@ -1,13 +1,27 @@
 .button-wrapper{
-    height: 2em;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    background-color: #5a5a5a;
-    color: white;
+    font-size: 1.5rem;
+    background-color: #898989;
+    color: rgb(36, 36, 36);
     flex: 1;
     font-weight: bold;
     cursor: pointer;
     margin: 1px;
+    /* user can not select text */
+    user-select: none;
+    transition: all 0.4s ease;
+
+}
+
+.button-wrapper:hover{
+    /* makes color darker */
+    filter: brightness(85%);
+}
+
+.button-wrapper:active{
+    /* kind of simulates an click event */
+    filter: brightness(60%);
 }
