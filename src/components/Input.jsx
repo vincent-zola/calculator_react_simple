@@ -5,7 +5,7 @@ const Input = ({text,result}) => {
   return (
     <div className="input-wrapper">
       <div className="result">
-          <h1 style={{color: isNaN(result) ? "red" : "green" }} >{result}</h1>
+          <h1 style={{color: isNaN(result) ? "#C25959" : "#71D45B" }} >{result}</h1>
       </div>
       <div className="text">
           <h3>{text}</h3>
