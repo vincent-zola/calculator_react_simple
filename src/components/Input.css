@@ -24,3 +24,12 @@
   color: gray;
   font-size: 0.9rem;
 }
+
+.error-text{
+  color: #C25959;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.result-text{
+  color: #71D45B;
+}
