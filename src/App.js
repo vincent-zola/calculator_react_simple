@@ -24,20 +24,31 @@ const App = () => {
     // Remove commas inside the array
     const input = text.join("");
     try {
-      // evaluate input and round to 14 digits, so that floating errors don't occur
-      setResult(math.format(math.evaluate(input), {precision: 14}));
-      setCalculation([...text])
+      
+      setResult(
+        // deletes insignificant zeros at the end
+        parseFloat(
+          // evaluate input
+          math.format(math.evaluate(input), {
+            // fixed: numbers will be without exponential notation
+            notation: "fixed",
+            // round to 14 digits, so that floating errors don't occur
+            precision: 14,
+          })
+        )
+      );
+      setCalculation([...text]);
       setText("");
     } catch (error) {
       setResult("! Syntax not supported, press Clear or DEL and try again.");
-      setCalculation(null)
+      setCalculation(null);
     }
   };
   // Clear console
   const resetInput = () => {
     setText("");
     setResult("");
-    setCalculation(null)
+    setCalculation(null);
   };
 
   const buttonColor = "#f2a33c";
