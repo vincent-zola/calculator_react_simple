@@ -29,7 +29,7 @@ const App = () => {
       setCalculation([...text])
       setText("");
     } catch (error) {
-      setResult("! Syntax not supported, press Clear and try again.");
+      setResult("! Syntax not supported, press Clear or DEL and try again.");
       setCalculation(null)
     }
   };
