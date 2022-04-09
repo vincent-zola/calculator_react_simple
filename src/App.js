@@ -24,7 +24,8 @@ const App = () => {
     // Remove commas inside the array
     const input = text.join("");
     try {
-      setResult(math.evaluate(input));
+      // evaluate input and round to 14 digits, so that floating errors don't occur
+      setResult(math.format(math.evaluate(input), {precision: 14}));
       setCalculation([...text])
       setText("");
     } catch (error) {
