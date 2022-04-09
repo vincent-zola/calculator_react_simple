@@ -19,4 +19,6 @@ body {
     display: flex;
   }
 
-  
+  .mistakes{
+    display: flex;
+  }

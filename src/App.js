@@ -5,11 +5,17 @@ import Input from "./components/Input";
 import * as math from "mathjs";
 
 const App = () => {
+  // stores our typed input
   const [text, setText] = useState("");
+  // stores result
   const [result, setResult] = useState("");
-
+  // Add item to text array
   const addToText = (val) => {
     setText((text) => [...text, val]);
+  };
+  // Delete last item from text array
+  const removeFromText = () => {
+    setText((text) => text.slice(0, -1));
   };
 
   const calculateResult = () => {
@@ -19,10 +25,10 @@ const App = () => {
       setResult(math.evaluate(input));
       setText("");
     } catch (error) {
-      setResult("Syntax not supported, press Clear and try again")
+      setResult("Syntax not supported, press Clear and try again");
     }
   };
-
+  // Clear console
   const resetInput = () => {
     setText("");
     setResult("");
@@ -58,7 +64,10 @@ const App = () => {
           <Button symbol="=" handleClick={calculateResult} />
           <Button symbol="-" color={buttonColor} handleClick={addToText} />
         </div>
-        <Button symbol="Clear" color="red" handleClick={resetInput} />
+        <div className="mistakes">
+          <Button symbol="Clear" color="#8A3333" handleClick={resetInput} />
+          <Button symbol="DEL" color="#C25959" handleClick={removeFromText} />
+        </div>
       </div>
     </div>
   );
