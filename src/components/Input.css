@@ -1,5 +1,5 @@
 .input-wrapper {
-  height: 10em;
+  min-height: 10rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -27,3 +27,5 @@
 .text h3{
   overflow-wrap: anywhere;
 }
+
+
