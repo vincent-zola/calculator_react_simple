@@ -9,6 +9,8 @@ const App = () => {
   const [text, setText] = useState("");
   // stores result
   const [result, setResult] = useState("");
+  // shows calculation next to setResult
+  const [calculation, setCalculation] = useState(null);
   // Add item to text array
   const addToText = (val) => {
     setText((text) => [...text, val]);
@@ -23,9 +25,11 @@ const App = () => {
     const input = text.join("");
     try {
       setResult(math.evaluate(input));
+      setCalculation([...text])
       setText("");
     } catch (error) {
       setResult("Syntax not supported, press Clear and try again");
+      setCalculation(null)
     }
   };
   // Clear console
@@ -39,7 +43,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="calc-wrapper">
-        <Input text={text} result={result} />
+        <Input text={text} result={result} calculation={calculation} />
         <div className="row">
           <Button symbol="7" handleClick={addToText} />
           <Button symbol="8" handleClick={addToText} />

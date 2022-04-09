@@ -7,25 +7,21 @@
   padding: 16px;
   background-color: rgb(43, 42, 42);
   border: 2px solid white;
+  overflow-wrap: anywhere;
+  text-align: right;
 }
 
 .result {
   flex: 1;
   font-size: 0.8rem;
-  
 }
 .text {
   flex: 1;
-  font-size: 18px;
+  font-size: 1rem;
   color: white;
 }
 
-.result h1{
-  overflow-wrap: anywhere;
+.result p {
+  color: gray;
+  font-size: 0.9rem;
 }
-
-.text h3{
-  overflow-wrap: anywhere;
-}
-
-
