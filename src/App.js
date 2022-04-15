@@ -50,7 +50,7 @@ const App = () => {
 
   const buttonColor = "#f2a33c";
 
-  console.log(text);
+  
 
   return (
     <div className="App">
