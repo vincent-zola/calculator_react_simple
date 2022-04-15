@@ -13,7 +13,7 @@ const App = () => {
   const [calculation, setCalculation] = useState(null);
   // Add item to text array
   const addToText = (val) => {
-    setText((text) => [...text, val]);
+    setText(text + val);
   };
   // Delete last item from text array
   const removeFromText = () => {
@@ -21,15 +21,12 @@ const App = () => {
   };
 
   const calculateResult = () => {
-    // Remove commas inside the array
-    const input = text.join("");
     try {
-      
       setResult(
         // deletes insignificant zeros at the end
         parseFloat(
           // evaluate input
-          math.format(math.evaluate(input), {
+          math.format(math.evaluate(text), {
             // fixed: numbers will be without exponential notation
             notation: "fixed",
             // round to 14 digits, so that floating errors don't occur
@@ -53,10 +50,18 @@ const App = () => {
 
   const buttonColor = "#f2a33c";
 
+  console.log(text);
+
   return (
     <div className="App">
       <div className="calc-wrapper">
-        <Input text={text} result={result} calculation={calculation} />
+        <Input
+          text={text}
+          result={result}
+          calculation={calculation}
+          setText={setText}
+          calculateResult={calculateResult}
+        />
         <div className="row">
           <Button symbol="7" handleClick={addToText} />
           <Button symbol="8" handleClick={addToText} />
