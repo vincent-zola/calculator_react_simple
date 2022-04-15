@@ -18,6 +18,7 @@
 .result p {
   color: gray;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .error-text {
@@ -27,6 +28,7 @@
 }
 .result-text {
   color: #71d45b;
+  cursor: pointer;
 }
 
 input {

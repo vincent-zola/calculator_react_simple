@@ -9,6 +9,7 @@ const App = () => {
   const [text, setText] = useState("");
   // stores result
   const [result, setResult] = useState("");
+
   // shows calculation next to setResult
   const [calculation, setCalculation] = useState(null);
   // Add item to text array
@@ -34,7 +35,7 @@ const App = () => {
           })
         )
       );
-      setCalculation([...text]);
+      setCalculation(text);
       setText("");
     } catch (error) {
       setResult("! Syntax not supported, press Clear or DEL and try again.");
@@ -49,8 +50,6 @@ const App = () => {
   };
 
   const buttonColor = "#f2a33c";
-
-  
 
   return (
     <div className="App">

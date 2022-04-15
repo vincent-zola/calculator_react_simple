@@ -1,7 +1,14 @@
 import React from "react";
 import "./Input.css";
 
-const Input = ({ text, result, calculation, setText, calculateResult }) => {
+const Input = ({
+  text,
+  result,
+  calculation,
+  setText,
+  calculateResult,
+  
+}) => {
   // If Enter is pressed in Input field than calculate result
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -13,11 +20,16 @@ const Input = ({ text, result, calculation, setText, calculateResult }) => {
     <div className="input-wrapper">
       <div className="result">
         {/* Show calculation from input at the top of the screen */}
-        {calculation && <p>({calculation})</p>}
+        {calculation && <p onClick={() => setText(calculation)} >({calculation})</p>}
         {/* Show result in green or Error-text in red depending if result is a number or not */}
-        <h1 className={isNaN(result) ? "error-text" : "result-text"}>
-          {result}
-        </h1>
+        {isNaN(result) ? (
+          <h1 className="error-text">{result}</h1>
+        ) : (
+          // onClick copy result to Input 
+          <h1 onClick={() => setText(result)} className="result-text">
+            {result}
+          </h1>
+        )}
       </div>
       {/* Input for our numbers */}
       <input
