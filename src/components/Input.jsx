@@ -26,7 +26,7 @@ const Input = ({
           <h1 className="error-text">{result}</h1>
         ) : (
           // onClick copy result to Input 
-          <h1 onClick={() => setText(result)} className="result-text">
+          <h1 onClick={() => setText(calculation)} className="result-text">
             {result}
           </h1>
         )}
