@@ -15,22 +15,21 @@
   font-size: 0.8rem;
 }
 
-
 .result p {
   color: gray;
   font-size: 0.9rem;
 }
 
-.error-text{
-  color: #C25959;
+.error-text {
+  color: #c25959;
   font-size: 0.9rem;
   text-align: left;
 }
-.result-text{
-  color: #71D45B;
+.result-text {
+  color: #71d45b;
 }
 
-input{
+input {
   text-align: right;
   background-color: rgb(43, 42, 42);
   border: none;
@@ -39,5 +38,11 @@ input{
   font-weight: bold;
   width: 100%;
   margin-bottom: 1.5rem;
-  outline:none;
+  outline: none;
 }
+
+/* placeholder disappears if clicked on the Input */
+input:focus::placeholder {
+  color: transparent;
+}
+

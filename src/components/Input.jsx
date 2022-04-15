@@ -23,11 +23,12 @@ const Input = ({ text, result, calculation, setText, calculateResult }) => {
       <input
         onChange={(e) => setText(e.target.value)}
         value={text}
+        placeholder="|"
         type="text"
         onKeyPress={handleKeyPress}
-        // By start of the App Input will be focused, cursor blinks, user can type immediately
-        autoFocus
-        onBlur={({ target }) => target.focus()}
+        // By start of the App Input will be focused, cursor blinks, user can type immediately, disabled because bad at phones
+        // autoFocus
+        // onBlur={({ target }) => target.focus()}
       ></input>
     </div>
   );
