@@ -55,9 +55,9 @@ const App = () => {
     <div className="App">
       <h1 className="logo">CALCMACHINE</h1>
       <div className="love-wrapper">
-        <h5>made with&nbsp;</h5>
-        <span>&#10084;</span>
-        <h5>&nbsp;in Atlantis</h5>
+        <p className="love-phrase">made with&nbsp;</p>
+        <p className="love-word">love</p>
+        <p className="love-phrase">&nbsp;in Atlantis</p>
       </div>
       <div className="calc-wrapper">
         <Input

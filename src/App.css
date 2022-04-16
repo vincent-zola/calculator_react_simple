@@ -13,23 +13,20 @@ body {
 .logo {
   color: #f2a33c;
 }
-.love-wrapper{
-  
+.love-wrapper {
+  font-size: 0.7rem;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 1rem;
-  align-items:center;
-  
+  align-items: center;
 }
-.love-wrapper h5 {
+.love-phrase {
   color: white;
-  
 }
-.love-wrapper span{
-  color: #C25959;
-  font-size: 1.5rem;
+.love-word {
+  color: #c25959;
 }
 
 .calc-wrapper {
