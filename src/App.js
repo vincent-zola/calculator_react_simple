@@ -53,7 +53,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>CALCMACHINE</h1>
+      <h1 className="logo">CALCMACHINE</h1>
       <div className="love-wrapper">
         <h5>made with&nbsp;</h5>
         <span>&#10084;</span>
