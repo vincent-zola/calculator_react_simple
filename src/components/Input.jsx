@@ -15,10 +15,11 @@ const Input = ({ text, result, calculation, setText, calculateResult }) => {
 
   // listen to any keypress
   useEffect(() => {
-    // if any key is pressed focus on Input
+    // if any key is pressed focus on Input Function
     const addToTextKeyboard = () => {
       calculationInput.current.focus();
     };
+    // listen for keypress
     document.addEventListener("keydown", addToTextKeyboard);
     // cleanup function
     return () => {
