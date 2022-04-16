@@ -53,6 +53,12 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>CALCMACHINE</h1>
+      <div className="love-wrapper">
+        <h5>made with&nbsp;</h5>
+        <span>&#10084;</span>
+        <h5>&nbsp;in Atlantis</h5>
+      </div>
       <div className="calc-wrapper">
         <Input
           text={text}

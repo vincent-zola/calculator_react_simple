@@ -1,24 +1,46 @@
 body {
-    background-color: rgb(51, 51, 51);
-  }
-  
-  .App {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .calc-wrapper {
-    box-shadow: 10px 10px 20px;
-    width: 380px;
-    
-  }
-  
-  .row {
-    display: flex;
-  }
+  background-color: rgb(51, 51, 51);
+}
 
-  .mistakes{
-    display: flex;
-  }
+.App {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App h1 {
+  color: #f2a33c;
+}
+.love-wrapper{
+  
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+  align-items:center;
+  
+}
+.love-wrapper h5 {
+  color: white;
+  
+}
+.love-wrapper span{
+  color: #C25959;
+  font-size: 1.5rem;
+}
+
+.calc-wrapper {
+  box-shadow: 10px 10px 20px;
+  width: 380px;
+}
+
+.row {
+  display: flex;
+}
+
+.mistakes {
+  display: flex;
+}
